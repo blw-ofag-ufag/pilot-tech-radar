@@ -68,6 +68,7 @@ for (i in 1:nrow(data)) {
 #' Add a title
 text(0, 2.4, "The FOAG Technology Radar (Pilot)", xpd = NA, cex = 3, font = 2)
 
+#' Close SVG file
 dev.off()
 
 
