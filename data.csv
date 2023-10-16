@@ -1,0 +1,35 @@
+﻿Name;Sector;Status;Description
+Large Language Models;ARTIFICIAL INTELLIGENCE;LAUNCHED ON MARKET;Many models have been lauched such as GPT-3.5, GPT-4, Bard, Claude 2, LLAMA.
+Text Translation;ARTIFICIAL INTELLIGENCE;MATURITY;DeepL and similar.
+Social Media Management and Monitoring;COMMUNICATION;APPLIED RESEARCH;
+Facial Recognition;ARTIFICIAL INTELLIGENCE;LAUNCHED ON MARKET;Refer to software such as clearview.ai and PimEyes.
+Latent Diffusion Models;ARTIFICIAL INTELLIGENCE;LAUNCHED ON MARKET;
+AutoML;ARTIFICIAL INTELLIGENCE;EXPERIMENTATION;
+speech2text;ARTIFICIAL INTELLIGENCE;MATURITY;
+text2speech;ARTIFICIAL INTELLIGENCE;EXPERIMENTATION;
+AGI;ARTIFICIAL INTELLIGENCE;APPLIED RESEARCH;
+Superintelligence;ARTIFICIAL INTELLIGENCE;BASIC RESEARCH;
+Large Multimodal Models;ARTIFICIAL INTELLIGENCE;EXPERIMENTATION;GPT-4, Gemini…
+Real time speech translation;ARTIFICIAL INTELLIGENCE;APPLIED RESEARCH;
+TikTok;COMMUNICATION;MATURITY;
+Realistic Metaverse Avatars;COMMUNICATION;EXPERIMENTATION;Refer to interview Mark Zuckerberg on Lex Fridman.
+Atlassian Software;COMMUNICATION;MATURITY;
+GPU-Clusters;INFRASTRUCTURE;MATURITY;
+ML-Workbench;INFRASTRUCTURE;LAUNCHED ON MARKET;
+4k-Monitors;INFRASTRUCTURE;MATURITY;
+Virtualization of data;INFRASTRUCTURE;;
+Cloud computing;INFRASTRUCTURE;MATURITY;
+Biomolecular data storage;INFRASTRUCTURE;BASIC RESEARCH;
+Milking robots;DATA;MATURITY;
+Weeding robots;DATA;LAUNCHED ON MARKET;
+Variable rate fertilization;DATA;EXPERIMENTATION;
+Next generation sequencing;DATA;APPLIED RESEARCH;
+UAV imaging;DATA;LAUNCHED ON MARKET;
+Satellite imaging;DATA;MATURITY;Use cases such as determining the vegetation cover period by satellite data.
+Open government data;DATA;EXPERIMENTATION;
+RDF;DATA;;
+LOD;DATA;;
+Green-IT;DATA;;
+ESG;DATA;LAUNCHED ON MARKET;
+Cyber-Security;DATA;;Not really “one” technology, not even a bundle of technology. Need to specify…
+Quantum-Computing;INFRASTRUCTURE;BASIC RESEARCH;
