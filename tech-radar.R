@@ -31,7 +31,7 @@ data[,"y"] <- (as.integer(data[,"Status"])-1)/(d-1)
 for (sector in levels(data[,"Sector"])) {
   for (status in levels(data[,"Status"])) {
     x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"]
-    while(any(diff(sort(x))<(1/g/5))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
+    while(any(diff(sort(x))<(1/g/8))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
     if(length(x)==0) next
     else data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] <- x
   }
