@@ -1,35 +1,42 @@
 ﻿Name;Sector;Status;Description
-Large Language Models;ARTIFICIAL INTELLIGENCE;LAUNCHED ON MARKET;Many models have been lauched such as GPT-3.5, GPT-4, Bard, Claude 2, LLAMA.
-Text Translation;ARTIFICIAL INTELLIGENCE;MATURITY;DeepL and similar.
-Social Media Management and Monitoring;COMMUNICATION;APPLIED RESEARCH;
-Facial Recognition;ARTIFICIAL INTELLIGENCE;LAUNCHED ON MARKET;Refer to software such as clearview.ai and PimEyes.
-Latent Diffusion Models;ARTIFICIAL INTELLIGENCE;LAUNCHED ON MARKET;
-AutoML;ARTIFICIAL INTELLIGENCE;EXPERIMENTATION;
-speech2text;ARTIFICIAL INTELLIGENCE;MATURITY;
-text2speech;ARTIFICIAL INTELLIGENCE;EXPERIMENTATION;
-AGI;ARTIFICIAL INTELLIGENCE;APPLIED RESEARCH;
-Superintelligence;ARTIFICIAL INTELLIGENCE;BASIC RESEARCH;
-Large Multimodal Models;ARTIFICIAL INTELLIGENCE;EXPERIMENTATION;GPT-4, Gemini…
-Real time speech translation;ARTIFICIAL INTELLIGENCE;APPLIED RESEARCH;
-TikTok;COMMUNICATION;MATURITY;
-Realistic Metaverse Avatars;COMMUNICATION;EXPERIMENTATION;Refer to interview Mark Zuckerberg on Lex Fridman.
-Atlassian Software;COMMUNICATION;MATURITY;
-GPU-Clusters;INFRASTRUCTURE;MATURITY;
-ML-Workbench;INFRASTRUCTURE;LAUNCHED ON MARKET;
-4k-Monitors;INFRASTRUCTURE;MATURITY;
-Virtualization of data;INFRASTRUCTURE;;
-Cloud computing;INFRASTRUCTURE;MATURITY;
-Biomolecular data storage;INFRASTRUCTURE;BASIC RESEARCH;
-Milking robots;DATA;MATURITY;
-Weeding robots;DATA;LAUNCHED ON MARKET;
-Variable rate fertilization;DATA;EXPERIMENTATION;
-Next generation sequencing;DATA;APPLIED RESEARCH;
-UAV imaging;DATA;LAUNCHED ON MARKET;
-Satellite imaging;DATA;MATURITY;Use cases such as determining the vegetation cover period by satellite data.
-Open government data;DATA;EXPERIMENTATION;
-RDF;DATA;;
-LOD;DATA;;
-Green-IT;DATA;;
-ESG;DATA;LAUNCHED ON MARKET;
-Cyber-Security;DATA;;Not really “one” technology, not even a bundle of technology. Need to specify…
-Quantum-Computing;INFRASTRUCTURE;BASIC RESEARCH;
+Large Language Models;artificial intelligence;launched on market;Machine learning models capable of generating written text in a human-like manner. GPT-3.5, GPT-4, Bard, Claude 2, LLAMA.
+Machine Translation;artificial intelligence;maturity;Software that automatically translates text from one language to another. <https://www.deepl.com>
+Social Media Management and Monitoring;Communication;applied research;Analysiere und verstehe deine Wirkung in sozialen Medien.
+Facial Recognition;artificial intelligence;launched on market;Software that can measure the similarity of faces from images or video, thus recognizing faces. <http://clearview.ai> <https://pimeyes.com>
+Latent Diffusion Models;artificial intelligence;launched on market;Neural network models that allows high resolution image synthesis using less resources than other methods (GAN, VAE, ARM). Can generate images from text input, remove objects on images. GitHub - CompVis/latent-diffusion: High-Resolution Image Synthesis with Latent Diffusion Models.
+AutoML;artificial intelligence;experimentation;Der Hauptvorteil von Auto-ML liegt in der Zeitersparnis bei der Datenverarbeitung und den Testphasen, die notwendig sind, um ein ausreichend leistungsfähiges (AI) Modell in Betrieb zu nehmen.
+speech2text;artificial intelligence;maturity;Machine learning models that convert speech of various languages to text. Speech2Text-App
+text2speech;artificial intelligence;experimentation;Software that generates speech from written text which sounds like (interesting) human beings. <https://openai.com/blog/chatgpt-can-now-see-hear-and-speak>
+AGI;artificial intelligence;applied research;Artificial General Intelligence. A hypothetical type of intelligent agent that can learn to accomplish any intellectual task that human beings or animals can perform.
+Superintelligence;artificial intelligence;basic research;A hypothetical agent or system that possesses intelligence far surpassing that of the brightest and most gifted human minds in virtually all domains of interest.
+Large Multimodal Models;artificial intelligence;experimentation;Large Multimodal Models (LMM) are advanced artificial intelligence systems that can process and generate information from multiple types of data, such as text, images, audio, and video, using powerful pre-trained language models as a core component.
+Real time speech translation;artificial intelligence;applied research;Tools using Neural machine translation (NTM) allows to translate instantly speech in one language to another. Example: SpeechTrans
+TikTok;Communication;maturity;Social media platform based on creating, watching and sharing short videos. TikTok - Make Your Day
+Realistic Metaverse Avatars;Communication;experimentation;Refer to interview Mark Zuckerberg on Lex Fridman.
+Atlassian Software;Communication;maturity;Jira, Confluence, Bitbucket are useful technologies, tools for planning, tracking, work organization, document creation, and/or collaborate on code. Products | Atlassian
+GPU-Clusters;infrastructure;maturity;Computer cluster where each node (at least some) will be equipped with Graphics Processing Unit. Useful for AI analysis. Examples: AWS and NVIDIA (amazon.com), Google Cloud.
+ML-Workbench;infrastructure;launched on market;Gleich wie ML-Auto
+4k-Monitors;infrastructure;maturity;
+Data Virtualization;infrastructure;maturity;Technology that allows to produce interactive data visualization. It is then possible to explore the data in more detail, highlight specific points, and customize the way it is represented. (Power BI, Tableau, Klipfolio, Qlik Sense,…) Microsoft Power BI
+Cloud computing;infrastructure;maturity;
+Biomolecular data storage;infrastructure;basic research;Store Data in DNA is a promising way. DNA can store a density of 10¹⁹ bits of data per cm3 which is way higher than the actual storage methods. The data will be stored according to the binary code where for instance 00 -> A, 01 -> C, 10 -> G and T -> 11. DNA will be sequenced through NGS (Illumina). BioTech | Free Full-Text | DNA Data Storage (mdpi.com)
+Milking robots;new data sources;maturity;
+Robotics;infrastructure;maturity;Automation of tasks, e.g. milking robots, cleaning systems, feeding
+Weeding robots;new data sources;launched on market;Intelligentes Sprühen für lokale Behandlungen Ihrer Reihenkulturen, Gräser und Rasenflächen
+Variable rate fertilization;new data sources;experimentation;Gleich aber für Düngung
+Next generation sequencing;new data sources;applied research;Technology used to sequence DNA, RNA. Can be used in several fields like the study of seeds and plant varieties, GMO control. Next-Generation Sequencing (NGS) | Explore the technology (illumina.com)
+UAV imaging;new data sources;launched on market;Luftbildaufnahmen durch Drohnen. Können dazu verwendet werden, Wasserstress zu erkennen oder Nährstoffkarten zu erstellen.
+Satellite imaging;new data sources;maturity;Use cases such as determining the vegetation cover period by satellite data.
+Open government data;data;experimentation;Governmental data that is openly accessible to the public. In Switzerland, available open government data is listed on opendata.swiss.
+Resource Description Framework;data;maturity;Framework to represent interconnected data on the web (semantic web). Used as standard to describe and visualize metadata.
+Linked open data;data;launched on market;Linked Open Data is a way of publishing and connecting data on the web using open standards and URIs such that it can be easily accessed, queried, and enriched by humans and machines.
+Green-IT;data;;Lösungen zu schaffen und aufzubauen, die Auswirkungen menschlicher Aktivitäten auf die Umwelt zu verringern oder andere umweltfreundliche Maßnahmen im IT-Bereich zu ergreifen.
+ESG;data;launched on market;Betrachtet verschiedenen Investitionsmöglichkeiten als auch unnötige Risiken um sie zu vermeiden
+Quantum-Computing;infrastructure;basic research;
+visualize.admin.ch;infrastructure;maturity;Visualization tool of OGD data on LINDAS: visualize.admin.ch
+i14y;data;maturity;Interoperability platform. Switzerland’s national data catalogue
+Vertical farming;data;maturity;Producing plants in a tightly controlled environment. Decisions about ressources are data driven.
+IoT;infrastructure;maturity;Network of devices that collect data.
+Digital twin;data;experimentation;Virtual representation of a system (e.g. farm) based on sensors and real-time data to make data-driven decisions
+Multi-stakeholder platforms;Communication;experimentation;Agridata (data exchange platform)
+smart farming/farm automation;data;experimentation;Diverse set of strategies to make informed decisions and to automate processes in agricultural businesses: Versuchsstation Smarte Technologien in der Landwirtschaft (admin.ch)
