@@ -17,7 +17,7 @@ data <- read.csv("data.csv", sep = ";")
 data <- data[!as.logical(rowSums(data[,2:3]=="")),]
 
 #' Change variable classes
-for (i in c("Sector","Status")) data[,i] %<>% tolower %>% as.factor
+for (i in c("Sector","Status")) data[,i] %<>% tolower %<>% as.factor
 
 #' Information relevant for the dynamic plotting
 d <- nlevels(data[,"Status"])
@@ -25,7 +25,7 @@ g <- nlevels(data[,"Sector"])
 
 #' Give an x and y axis position to every observation
 data[,"x"] <- (as.integer(data[,"Sector"])-1)/(g-1)
-data[,"y"] <- (as.integer(data[,"Status"])-1)/(d-1)
+data[,"y"] <- 1 - (as.integer(data[,"Status"])-1)/(d-1)
 
 #' Add a x-axis bias such that no point overlaps
 for (sector in levels(data[,"Sector"])) {
@@ -38,7 +38,7 @@ for (sector in levels(data[,"Sector"])) {
 }
 
 #' Open an empty SVG file.
-svg("technology-radar.svg", width = 8, height = 12)
+png("technology-radar.png", width = 8, height = 12, res = 300, unit = "in")
 
 #' Set graphical parameters
 par(bg = "gray20", mar = rep(3,4), fg = "gray90")
