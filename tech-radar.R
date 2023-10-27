@@ -34,7 +34,7 @@ data[,"y"] <- 1 - (as.integer(data[,"Status"])-1)/(d-1)
 for (sector in levels(data[,"Sector"])) {
   for (status in levels(data[,"Status"])) {
     x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"]
-    while(any(diff(sort(x))<(1/g/8))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
+    while(any(diff(sort(x))<(1/g/5))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
     if(length(x)==0) next
     else data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] <- x
   }
@@ -51,7 +51,7 @@ palette <- colorRampPalette(c("red","#517A7B"))
 plot(NA, xlim = c(-2,2), ylim = c(-1,2), axes = FALSE, xlab = "", ylab = "", asp = 1)
 
 #' Add the rings and sector segments
-width <- 35
+width <- 30
 rings <- seq(-pi*(g/((g-1)*2)), pi*(g/((g-1)*2)),l=500)
 for (i in seq(1,2,0.25)) lines(sin(rings)*i, cos(rings)*i, lwd = width, col = palette(7)[(i-1)*5+1])
 for (i in seq(-g/((g-1)*2),g/((g-1)*2),l=g+1)) lines(x = c(0, 3*sin(i*pi)), y = c(0, 3*cos(i*pi)), col = par()$bg, lwd = width)
@@ -60,17 +60,11 @@ for (i in seq(-g/((g-1)*2),g/((g-1)*2),l=g+1)) lines(x = c(0, 3*sin(i*pi)), y = 
 with(data, points((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), pch = 21, cex = sqrt(Relevance)*2, lwd = sqrt(Relevance), bg = par()$bg))
 with(data, text((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), 1:nrow(data), cex = sqrt(Relevance)*0.6, col = par()$fg, font = 2))
 
+#' Close SVG file
+dev.off()
+
 #' Write the legend as text into the README file
 sink("README.md")
 readLines("HEADER.md") |> cat(sep="\n")
 for (i in 1:nrow(data)) cat("\n\n(", i, ") **", data[i,"Name"],":** ", data[i,"Description"], sep = "")
 sink()
-
-#' Add a title
-text(0, 2.4, "The FOAG Technology Radar (Pilot)", xpd = NA, cex = 3, font = 2)
-
-#' Close SVG file
-dev.off()
-
-
-
