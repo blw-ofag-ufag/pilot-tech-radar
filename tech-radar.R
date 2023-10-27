@@ -41,30 +41,39 @@ for (sector in levels(data[,"Sector"])) {
 }
 
 #' Open an empty SVG file.
-png("technology-radar.png", width = 12, height = 8, res = 300, unit = "in")
+png("technology-radar.png", width = 12.5, height = 8, res = 300, unit = "in")
 
 #' Set graphical parameters
-par(bg = "white", mar = rep(0,4))
-palette <- colorRampPalette(c("red","#517A7B"))
+par(bg = "white", mar = c(0,0,2,0))
+palette <- colorRampPalette(c("darkred","turquoise"))(d+1)
 
 #' Set the plotting plane
 plot(NA, xlim = c(-2,2), ylim = c(-1,2), axes = FALSE, xlab = "", ylab = "", asp = 1)
 
 #' Add the rings and sector segments
-width <- 30
+width <- 35
 rings <- seq(-pi*(g/((g-1)*2)), pi*(g/((g-1)*2)),l=500)
-for (i in seq(1,2,0.25)) lines(sin(rings)*i, cos(rings)*i, lwd = width, col = palette(7)[(i-1)*5+1])
+for (i in seq(1,2,l=d)) lines(sin(rings)*i, cos(rings)*i, lwd = width, col = palette[(i-1)*5+1])
 for (i in seq(-g/((g-1)*2),g/((g-1)*2),l=g+1)) lines(x = c(0, 3*sin(i*pi)), y = c(0, 3*cos(i*pi)), col = par()$bg, lwd = width)
 
 #' Add the numbered white points
-with(data, points((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), pch = 21, cex = sqrt(Relevance)*2, lwd = sqrt(Relevance), bg = par()$bg))
-with(data, text((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), 1:nrow(data), cex = sqrt(Relevance)*0.6, col = par()$fg, font = 2))
+with(data, points((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), pch = 21, cex = sqrt(Relevance)*2.5, lwd = sqrt(Relevance), bg = par()$bg))
+with(data, text((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), 1:nrow(data), cex = sqrt(Relevance)*0.75, col = par()$fg, font = 2))
+
+#' Labels of Sectors
+phi <- seq(-pi/2,pi/2,l=g)
+distance <- 2.23
+text(x = distance*sin(phi), y = distance*cos(phi), toupper(gsub(" ", "\n", levels(data$Sector))), xpd = NA, font = 2, cex = 1.5)
+
+#' Labels of Status
+text(0, seq(-0.4,-1,l=d), toupper(levels(data$Status)), font = 2, cex = 1.5, xpd = NA, col = palette)
 
 #' Close SVG file
 dev.off()
 
 #' Write the legend as text into the README file
 sink("README.md")
-readLines("HEADER.md") |> cat(sep="\n")
+"# Warm-up DBDD\n\nThis repository contains the R script (`tech-radar.R`) used to create the technology radar pilot as a SVG file. The source data (`data.csv`) contains all relevant information for reproducing the result.\n\n![Technology radar.](technology-radar.png)" |>
+  cat(sep="\n")
 for (i in 1:nrow(data)) cat("\n\n(", i, ") **", data[i,"Name"],":** ", data[i,"Description"], sep = "")
 sink()
