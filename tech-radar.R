@@ -10,6 +10,12 @@ set.seed(1)
 #' Attach packages to search path.
 library(magrittr)
 
+#' Attach packages to read in svg files, voncert to png and place within plot.
+library(rsvg)
+library(png)
+library(grid)
+
+
 #' Read the data from a CSV file.
 data <- read.csv("data.csv", sep = ";")
 
@@ -40,6 +46,12 @@ for (sector in levels(data[,"Sector"])) {
   }
 }
 
+#' Convert logo to png for better handeling
+rsvg_png("techrada_logo.svg", "techrada_logo_out.png", width = 1000, height = 1000)
+
+#' Read in png logo
+logo <- readPNG("techrada_logo_out.png")
+
 #' Open an empty SVG file.
 png("technology-radar.png", width = 12.5, height = 8, res = 300, unit = "in")
 
@@ -48,7 +60,7 @@ par(bg = "white", mar = c(0,0,2,0))
 palette <- colorRampPalette(c("darkred","turquoise"))(d+1)
 
 #' Set the plotting plane
-plot(NA, xlim = c(-2,2), ylim = c(-1,2), axes = FALSE, xlab = "", ylab = "", asp = 1)
+plot(NA, xlim = c(-2,2), ylim = c(-1.5,2), axes = FALSE, xlab = "", ylab = "", asp = 1)
 
 #' Add the rings and sector segments
 width <- 35
@@ -66,12 +78,15 @@ distance <- 2.23
 text(x = distance*sin(phi), y = distance*cos(phi), toupper(gsub(" ", "\n", levels(data$Sector))), xpd = NA, font = 2, cex = 1.5)
 
 #' Labels of Status
-text(0, seq(-0.4,-1,l=d), toupper(levels(data$Status)), font = 2, cex = 1.5, xpd = NA, col = palette)
+text(x=0, seq(-0.9,-1.5,l=d), toupper(levels(data$Status)), font = 2, cex = 1.2, xpd = NA, col = palette)
+
+#' Add logo
+grid.raster(logo, x=.5, y=.43, width=.26) 
 
 #' Close SVG file
 dev.off()
 
-#' Write the legend as text into the README file
+#' Write the legend as text into the README.md file
 sink("README.md")
 "# Warm-up DBDD\n\nThis repository contains the R script (`tech-radar.R`) used to create the technology radar pilot as a SVG file. The source data (`data.csv`) contains all relevant information for reproducing the result.\n\n![Technology radar.](technology-radar.png)" |>
   cat(sep="\n")
