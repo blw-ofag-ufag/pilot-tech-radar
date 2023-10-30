@@ -47,10 +47,10 @@ for (sector in levels(data[,"Sector"])) {
 }
 
 #' Convert logo to png for better handeling
-rsvg_png("techrada_logo.svg", "techrada_logo_out.png", width = 1000, height = 1000)
+rsvg_png("logo.svg", "logo.png", width = 1000, height = 1000)
 
 #' Read in png logo
-logo <- readPNG("techrada_logo_out.png")
+logo <- readPNG("logo.png")
 
 #' Open an empty SVG file.
 png("technology-radar.png", width = 12.5, height = 8, res = 300, unit = "in")
@@ -81,10 +81,13 @@ text(x = distance*sin(phi), y = distance*cos(phi), toupper(gsub(" ", "\n", level
 text(x=0, seq(-0.9,-1.5,l=d), toupper(levels(data$Status)), font = 2, cex = 1.2, xpd = NA, col = palette)
 
 #' Add logo
-grid.raster(logo, x=.5, y=.43, width=.26) 
+grid.raster(logo, x=.5, y=.43, width=.26)
 
-#' Close SVG file
+#' Close
 dev.off()
+
+#' Delete logo.png file again
+file.remove("logo.png")
 
 #' Write the legend as text into the README.md file
 sink("README.md")
