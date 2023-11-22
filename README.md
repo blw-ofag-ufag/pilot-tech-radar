@@ -55,7 +55,7 @@ This repository contains the R script (`tech-radar.R`) used to create the techno
 
 (25) **i14y:** Interoperability platform. Switzerland’s national data catalogue
 
-(26) **visualize.admin.ch:** Visualization tool of OGD data on LINDAS: visualize.admin.ch
+(26) **visualize.admin.ch:** Visualization tool of OGD data on LINDAS: [visualize.admin.ch]
 
 (27) **Biomolecular data storage:** Store Data in DNA is a promising way. DNA can store a density of 10¹⁹ bits of data per cm3 which is way higher than the actual storage methods. The data will be stored according to the binary code where for instance 00 -> A, 01 -> C, 10 -> G and T -> 11. DNA will be sequenced through NGS (Illumina). BioTech | Free Full-Text | DNA Data Storage (mdpi.com) Example: coded 16GB of Wikipedia in DNA. Startup packs all 16GB of Wikipedia onto DNA strands to demonstrate new storage tech - CNET
 
