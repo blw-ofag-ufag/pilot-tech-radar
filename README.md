@@ -51,7 +51,7 @@ This repository contains the R script (`tech-radar.R`) used to create the techno
 
 (23) **Open government data:** Governmental data that is openly accessible to the public. In Switzerland, available open government data is listed on opendata.swiss.
 
-(24) **Resource Description Framework:** Framework to represent interconnected data on the web (semantic web). Used as standard to describe and visualize metadata. See (https://www.w3.org/RDF/)[https://www.w3.org/RDF/]
+(24) **Resource Description Framework:** Framework to represent interconnected data on the web (semantic web). Used as standard to describe and visualize metadata. See [https://www.w3.org/RDF/](https://www.w3.org/RDF/)
 
 (25) **i14y:** [Interoperability platform](https://www.i14y.admin.ch/en/home). Switzerland’s national data catalogue. 
 
