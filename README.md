@@ -43,7 +43,7 @@ This repository contains the R script (`tech-radar.R`) used to create the techno
 
 (19) **Digital twin:** Virtual representation of a system (e.g. farm) based on sensors and real-time data to make data-driven decisions
 
-(20) **Linked open data:** Linked Open Data is a way of publishing and connecting data on the web using open standards and URIs such that it can be easily accessed, queried, and enriched by humans and machines.
+(20) **Linked open data:** Linked Open Data is a way of publishing and connecting data on the web using open standards and URIs such that it can be easily accessed, queried, and enriched by humans and machines. See for switzerland: [lindas.admin.ch](https://lindas.admin.ch/)
 
 (21) **ESG:** Environmental, Social and Corporate Governance. Framework to assess an organization regarding environmenteal, social and governance standards.
 
@@ -51,11 +51,11 @@ This repository contains the R script (`tech-radar.R`) used to create the techno
 
 (23) **Open government data:** Governmental data that is openly accessible to the public. In Switzerland, available open government data is listed on opendata.swiss.
 
-(24) **Resource Description Framework:** Framework to represent interconnected data on the web (semantic web). Used as standard to describe and visualize metadata.
+(24) **Resource Description Framework:** Framework to represent interconnected data on the web (semantic web). Used as standard to describe and visualize metadata. See [https://www.w3.org/RDF/](https://www.w3.org/RDF/)
 
-(25) **i14y:** Interoperability platform. Switzerland’s national data catalogue
+(25) **i14y:** [Interoperability platform](https://www.i14y.admin.ch/en/home). Switzerland’s national data catalogue. 
 
-(26) **visualize.admin.ch:** Visualization tool of OGD data on LINDAS: visualize.admin.ch
+(26) **visualize.admin.ch:** Visualization tool of OGD data on LINDAS: [visualize.admin.ch](visualize.admin.ch)
 
 (27) **Biomolecular data storage:** Store Data in DNA is a promising way. DNA can store a density of 10¹⁹ bits of data per cm3 which is way higher than the actual storage methods. The data will be stored according to the binary code where for instance 00 -> A, 01 -> C, 10 -> G and T -> 11. DNA will be sequenced through NGS (Illumina). BioTech | Free Full-Text | DNA Data Storage (mdpi.com) Example: coded 16GB of Wikipedia in DNA. Startup packs all 16GB of Wikipedia onto DNA strands to demonstrate new storage tech - CNET
 
