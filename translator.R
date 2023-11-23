@@ -30,25 +30,23 @@ data <- read.csv("data.csv", sep = ";")
 relevant_columns <- c(1,4)
 
 #' define which variables are factors
-is_factor <- c(2,3)
+is_factor <- c("Sector","Status")
 
-sector_translation <- data.frame(
-  English = c("artificial intelligence", "communication", "data", "infrastructure", "smart farming"),
-  German = c("künstliche intelligenz", "kommunikation", "daten", "infrastruktur", "smart farming"),
-  French = c("intelligence artificielle", "communication", "données", "infrastructure", "smart farming"),
-  Italian = c("intelligenza artificiale", "comunicazione", "dati", "infrastruttura", "smart farming"))
-status_translation <- data.frame(
-  English = c("launched on market", "maturity", "experimentation", "applied research", "basic research"),
-  German = c("auf den markt gebracht", "reife", "experimentierung", "angewandte Forschung", "grundlagenforschung"),
-  French = c("lancé sur le marché", "maturité", "expérimentation", "recherche appliquée", "recherche fondamentale"),
-  Italian = c("lanciato sul mercato", "maturità", "sperimentazione", "ricerca applicata", "ricerca di base")
-)
+#' read the prepared translations for factor levels
+factor_names <- read.csv("factor-translations.csv")
 
 #' Loop through every chosen languange
 for (language in "German") {
   
   # copy data frame and rename it
   X <- data
+  
+  # translate factor names
+  for (i in is_factor) {
+    X[,i] <- factor(X[,i],
+                    levels = factor_names[factor_names[,"Language"]=="English" & factor_names[,"Variable"]==i,"Translation"],
+                    labels = factor_names[factor_names[,"Language"]==language & factor_names[,"Variable"]==i,"Translation"])
+  }
   
   # loop over columns to be translated
   for (j in relevant_columns) {
@@ -73,6 +71,8 @@ for (language in "German") {
       progressbar((which(j==relevant_columns)-1)*nrow(data)+i, length(relevant_columns)*nrow(data), paste("Translating to", language))
     }
   }
+  
+  # create a directory for the specific language
   
   # copy data frame and rename it
   assign(paste0("data_", language), X)
