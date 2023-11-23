@@ -19,7 +19,7 @@ for (language in c("English", "German", "French", "Italian")) {
   set.seed(1)
   
   #' Read the data from a CSV file.
-  data <- read.csv(file.path(language, paste0("data-",language,".csv")), sep = ",")
+  data <- read.csv(file.path(language, paste0("data-",language,".csv")), sep = ";")
   
   #' Omit data without Sector or Status information
   data <- data[!as.logical(rowSums(data[,2:3]=="")),]
