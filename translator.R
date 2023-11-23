@@ -21,7 +21,7 @@ set.seed(1)
 library(openai)
 
 #' Set secret OpenAI API key
-Sys.setenv(OPENAI_API_KEY = "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")
+Sys.setenv(OPENAI_API_KEY = readLines("keys.txt"))
 
 #' Read English data
 data <- read.csv("data.csv", sep = ";")
