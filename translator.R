@@ -24,7 +24,7 @@ library(openai)
 Sys.setenv(OPENAI_API_KEY = readLines("my-secret-API-key"))
 
 #' Read English data
-data <- read.csv("data.csv", sep = ";")
+data <- read.csv(file.path("English", "data-English.csv"), sep = ";")
 
 #' Define the columns we want to translate
 relevant_columns <- c(1,4)
@@ -36,16 +36,16 @@ is_factor <- c("Sector","Status")
 factor_names <- read.csv("factor-translations.csv")
 
 #' Loop through every chosen languange
-for (language in "German") {
+for (language in languages) {
   
   # copy data frame and rename it
   X <- data
   
-  # translate factor names
+  # assign factors and change their names
   for (i in is_factor) {
-    X[,i] <- factor(X[,i],
-                    levels = factor_names[factor_names[,"Language"]=="English" & factor_names[,"Variable"]==i,"Translation"],
-                    labels = factor_names[factor_names[,"Language"]==language & factor_names[,"Variable"]==i,"Translation"])
+    X[,i] <- factor(tolower(X[,i]),
+                    levels = tolower(factor_names[factor_names[,"Language"]=="English" & factor_names[,"Variable"]==i,"Translation"]),
+                    labels = tolower(factor_names[factor_names[,"Language"]==language & factor_names[,"Variable"]==i,"Translation"]))
   }
   
   # loop over columns to be translated
@@ -73,10 +73,11 @@ for (language in "German") {
   }
   
   # create a directory for the specific language
+  if(!dir.exists(language)) dir.create(language)
   
-  # copy data frame and rename it
-  assign(paste0("data_", language), X)
-  
+  # write translated data frame as a csv
+  write.table(X, file = file.path(language,paste0("data-",language,".csv")), row.names = FALSE, sep = ";")
+
 }
 
 
