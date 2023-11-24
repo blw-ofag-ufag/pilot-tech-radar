@@ -1,7 +1,7 @@
 #' ---
 #' title: Script to automatically translate a CSV file
 #' author: Damian Oswald
-#' date: 2023-11-20
+#' date: 2023-11-23
 #' ---
 
 #' Function to print out progress
@@ -33,7 +33,7 @@ relevant_columns <- c(1,4)
 is_factor <- c("Sector","Status")
 
 #' read the prepared translations for factor levels
-factor_names <- read.csv("factor-translations.csv")
+factor_names <- read.csv(file.path("resources","factor-translations.csv"))
 
 #' Loop through every chosen languange
 for (language in languages) {

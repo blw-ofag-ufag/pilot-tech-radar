@@ -49,7 +49,7 @@ for (language in c("English", "German", "French", "Italian")) {
   }
   
   #' Convert logo to png for better handeling
-  rsvg_png("logo.svg", "logo.png", width = 1000, height = 1000)
+  rsvg_png(file.path("resources", "logo.svg"), "logo.png", width = 1000, height = 1000)
   
   #' Read in png logo
   logo <- readPNG("logo.png")
@@ -76,11 +76,11 @@ for (language in c("English", "German", "French", "Italian")) {
   
   #' Labels of Sectors
   phi <- seq(-pi/2,pi/2,l=g)
-  distance <- 2.23
+  distance <- c(2.5,2.4,2.23,2.4,2.5)
   text(x = distance*sin(phi), y = distance*cos(phi), toupper(gsub(" ", "\n", levels(data$Sector))), xpd = NA, font = 2, cex = 1.5)
   
   #' Labels of Status
-  text(x=0, seq(-0.9,-1.5,l=d), toupper(levels(data$Status)), font = 2, cex = 1.2, xpd = NA, col = palette)
+  text(x=0, seq(-0.9,-1.5,l=d), rev(toupper(levels(data$Status))), font = 2, cex = 1.2, xpd = NA, col = palette)
   
   #' Add logo
   grid.raster(logo, x=.5, y=.43, width=.26)
@@ -92,7 +92,7 @@ for (language in c("English", "German", "French", "Italian")) {
   file.remove("logo.png")
   
   #' Write the legend as text into the README.md file
-  sink(file.path(language, "description.md"))
+  sink(file.path(language, "README.md"))
   "![](technology-radar.png)" |>
     cat(sep="\n")
   for (i in 1:nrow(data)) cat("\n\n(", i, ") **", data[i,"Name"],":** ", data[i,"Description"], sep = "")
