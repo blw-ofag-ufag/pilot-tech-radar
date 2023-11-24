@@ -7,7 +7,7 @@
 #' Attach packages to search path.
 library(magrittr)
 
-#' Attach packages to read in svg files, voncert to png and place within plot.
+#' Attach packages to read in svg files, convert to png and place within plot.
 library(rsvg)
 library(png)
 library(grid)
@@ -25,10 +25,19 @@ for (language in c("English", "German", "French", "Italian")) {
   data <- data[!as.logical(rowSums(data[,2:3]=="")),]
   
   #' Change variable classes
-  for (i in c("Sector","Status")) data[,i] %<>% tolower %<>% as.factor
+  #for (i in c("Sector","Status")) data[,i] %<>% tolower %<>% as.factor
+  factor_names <- read.csv(file.path("resources","factor-translations.csv"))
+  for (i in c("Sector","Status")) {
+    levelnames <- factor_names[factor_names$Variable==i & factor_names$Language==language,"Translation"]
+    if (i=="Status") levelnames <- rev(levelnames)
+    data[,i] <- factor(tolower(data[,i]), levels = levelnames)
+  }
   
   #' Sort data
   data <- data[with(data, order(Sector, Status)),]
+  
+  #' Give new row names
+  row.names(data) <- 1:nrow(data)
   
   #' Information relevant for the dynamic plotting
   d <- nlevels(data[,"Status"])
@@ -42,7 +51,7 @@ for (language in c("English", "German", "French", "Italian")) {
   for (sector in levels(data[,"Sector"])) {
     for (status in levels(data[,"Status"])) {
       x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"]
-      while(any(diff(sort(x))<(1/g/5))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
+      while(any(diff(sort(x))<(1/g/7))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
       if(length(x)==0) next
       else data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] <- x
     }
@@ -95,7 +104,10 @@ for (language in c("English", "German", "French", "Italian")) {
   sink(file.path(language, "README.md"))
   "![](technology-radar.png)" |>
     cat(sep="\n")
-  for (i in 1:nrow(data)) cat("\n\n(", i, ") **", data[i,"Name"],":** ", data[i,"Description"], sep = "")
+  for (i in 1:nrow(data)) {
+    link <- if(data[i,"Example_URL"]!="") paste0(" [", data[i,"Example_Name"]," 🡥](", data[i,"Example_URL"], ")") else ""
+    cat("\n\n(", i, ") **", data[i,"Name"],":** ", data[i,"Description"], " ", data[i,"Link"], link, sep = "")
+  }
   sink()
   
 }
