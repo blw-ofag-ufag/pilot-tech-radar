@@ -51,7 +51,7 @@ for (language in c("English", "German", "French", "Italian")) {
   for (sector in levels(data[,"Sector"])) {
     for (status in levels(data[,"Status"])) {
       x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"]
-      while(any(diff(sort(x))<(1/g/7))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
+      while(any(diff(sort(x))<(1/g/6))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
       if(length(x)==0) next
       else data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] <- x
     }
@@ -80,8 +80,8 @@ for (language in c("English", "German", "French", "Italian")) {
   for (i in seq(-g/((g-1)*2),g/((g-1)*2),l=g+1)) lines(x = c(0, 3*sin(i*pi)), y = c(0, 3*cos(i*pi)), col = par()$bg, lwd = width)
   
   #' Add the numbered white points
-  with(data, points((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), pch = 21, cex = sqrt(Relevance)*2.5, lwd = sqrt(Relevance), bg = par()$bg))
-  with(data, text((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), 1:nrow(data), cex = sqrt(Relevance)*0.75, col = par()$fg, font = 2))
+  with(data, points((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), pch = 21, cex = sqrt(Relevance)*2.5*0.8, lwd = sqrt(Relevance), bg = par()$bg))
+  with(data, text((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), 1:nrow(data), cex = sqrt(Relevance)*0.75*0.8, col = par()$fg, font = 2))
   
   #' Labels of Sectors
   phi <- seq(-pi/2,pi/2,l=g)

@@ -63,13 +63,14 @@ for (language in languages) {
         messages = list(list(role = "user",
                              content = prompt))
       )
-      
+
       # save translation in the data frame
       X[i,j] <- translation$choices$message.content
       
       # print out progress
       progressbar((which(j==relevant_columns)-1)*nrow(data)+i, length(relevant_columns)*nrow(data), paste("Translating to", language))
     }
+    
   }
   
   # create a directory for the specific language
@@ -77,7 +78,9 @@ for (language in languages) {
   
   # write translated data frame as a csv
   write.table(X, file = file.path(language,paste0("data-",language,".csv")), row.names = FALSE, sep = ";")
-
+  
+  # start new line for new language
+  cat("\n")
 }
 
 

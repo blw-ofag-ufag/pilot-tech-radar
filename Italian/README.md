@@ -1,76 +1,78 @@
 ![](technology-radar.png)
 
 
-(1) **TikTok:** Piattaforma di social media basata sulla creazione, visualizzazione e condivisione di brevi video. *TikTok* - Rendi unico il tuo giorno
+(1) **Superintelligenza:** Un agente o sistema ipotetico che possiede un'intelligenza che supera di gran lunga quella degli esseri umani più brillanti e dotati in praticamente tutti i campi di interesse. 
 
-(2) **Software Atlassian:** Jira, Confluence, Bitbucket sono tecnologie utili, strumenti per la pianificazione, il tracciamento, l'organizzazione del lavoro, la creazione di documenti e/o la collaborazione sul codice. Prodotti | Atlassian
+(2) ***AGI*:** Diminutivo per intelligenza artificiale generale. Un tipo ipotetico di agente intelligente che può imparare a svolgere qualsiasi compito intellettuale che gli esseri umani possono eseguire. 
 
-(3) **Gestione e Monitoraggio dei *Social Media*:** Analizza e comprendi il tuo impatto sui *social media*.
+(3) **Traduzione del discorso in tempo reale:** Strumenti che permettono di tradurre istantaneamente il discorso da una lingua a un'altra.  [SpeechTrans 🡥](https://speechtrans.com/)
 
-(4) **Avatar Realistici del *Metaverse*:** Riferisciti all'intervista a Mark Zuckerberg su Lex Fridman.
+(4) ***AutoML*:** L'acronimo di Automated Machine Learning, si riferisce al processo di selezione e ottimizzazione automatica dei modelli di *machine learning*. Allows for cheap model fitting wherever small data sets are available. [R package automl 🡥](https://cran.r-project.org/web/packages/automl/)
 
-(5) **Piattaforme multi-partecipative:** Agridata (piattaforma di scambio dati)
+(5) **Testo-da-leggere:** Software che genera discorsi da testi scritti che suonano come (interessanti) esseri umani.  [OpenAI’s TTS 🡥](https://platform.openai.com/docs/guides/text-to-speech)
 
-(6) **Linked open data aperto collegato:** Linked Open Data è un modo di pubblicare e collegare dati sul web utilizzando standard aperti e *URIs* in modo tale che possano essere facilmente accessibili, interrogati e arricchiti sia da esseri umani che da macchine.
+(6) **Modelli Linguistici di Ampia Dimensione:** Sistemi di intelligenza artificiale capaci di generare testi scritti in modo simile all'uomo.  [ChatGPT 🡥](https://chat.openai.com/)
 
-(7) **ESG:** Ambientale, Sociale e Governance Aziendale. Framework per valutare un'organizzazione riguardo agli standard ambientali, sociali e di governance.
+(7) **Riconoscimento Facciale:** Software in grado di misurare la somiglianza dei volti da immagini o video, riconoscendo così i visi.  [PimEyes 🡥](https://pimeyes.com/)
 
-(8) **Coltivazione verticale:** Produzione di piante in un ambiente strettamente controllato. Le decisioni relative alle risorse sono guidate dai dati.
+(8) **Modelli di Diffusione Latente:** Modelli che generano immagini arbitrarie da input di testo, immagine o parametri.  [Midjourney 🡥](https://www.midjourney.com/)
 
-(9) **Dati aperti del governo:** Dati governativi apertamente accessibili al pubblico. In Svizzera, i dati governativi aperti disponibili sono elencati su *opendata.swiss*.
+(9) **Da voce a testo:** Modelli di apprendimento automatico che convertono il discorso di varie lingue in testo.  [Whisper 🡥](https://openai.com/research/whisper)
 
-(10) **Framework per la Descrizione delle Risorse:** Struttura per rappresentare dati interconnessi sul web (*semantic web*). Utilizzata come standard per descrivere e visualizzare i metadati.
+(10) **Grandi Modelli Multimodali:** Sistemi avanzati di intelligenza artificiale in grado di elaborare informazioni provenienti da più tipi di dati, come testo, immagini, audio e video, utilizzando potenti modelli di linguaggio pre-addestrati come componente chiave.  [GPT-4 🡥](https://openai.com/blog/chatgpt-can-now-see-hear-and-speak)
 
-(11) **i14y:** Piattaforma di interoperabilità. Il catalogo nazionale dei dati della Svizzera.
+(11) **Traduzione Automatica:** Software che traduce automaticamente il testo da una lingua all'altra. Such software can make it much more feasible to publish content to all national languages. [Deepl 🡥](https://deepl.com/)
 
-(12) **visualize.admin.ch:** Strumento di visualizzazione dei dati OGD su LINDAS: visualize.admin.ch
+(12) **Gestione e Monitoraggio dei *Social Media*:** Monitoraggio, analisi e risposta ai contenuti su piattaforme di *social media* per gestire la presenza e la reputazione online di un'organizzazione o individuo. 
 
-(13) **Sequenziamento di prossima generazione:** Tecnologia utilizzata per sequenziare DNA, RNA. Può essere usata in diversi campi come lo studio di semi e varietà di piante, controllo degli OGM. Sequenziamento di nuova generazione (NGS) | Esplora la tecnologia (illumina.com)
+(13) **Avatar del *Metaverse*:** Avatar dall'aspetto realistico che permettono una presenza apparentemente naturale nel *Metaverse*. This technology could allow for a more direct connection during remote meetings. [Interview 🡥](https://www.youtube.com/watch?v=MVYrJJNdrEg)
 
-(14) **Green-IT:** Creare e sviluppare soluzioni per ridurre l'impatto delle attività umane sull'ambiente o adottare altre misure ecocompatibili nel settore *IT*.
+(14) **TikTok:** Piattaforma di social media incentrata sui contenuti video brevi, popolare per la sua vasta gamma di musica, danza, comicità e video creativi generati dagli utenti.  [TikTok 🡥](https://www.tiktok.com/)
 
-(15) **Gemello digitale:** Rappresentazione virtuale di un sistema (ad esempio, una fattoria) basata su sensori e dati in tempo reale per prendere decisioni basate sui dati
+(15) **Software Atlassian:** Un insieme di strumenti utili per pianificare, monitorare, organizzare il lavoro, creare documentazioni e collaborare sul *code*.  [Atlassian 🡥](https://www.atlassian.com/software)
 
-(16) **Cluster di *GPU*:** Cluster di computer in cui ogni nodo (almeno alcuni) sarà dotato di una *Graphics Processing Unit*. Utile per l'analisi di AI. Esempi: AWS e NVIDIA (amazon.com), Google Cloud.
+(16) **Sequenziamento di prossima generazione:** Tecnologia utilizzata per sequenziare DNA o RNA. Può essere utilizzata in diversi campi di ricerca come lo studio di semi e varietà di piante.  [Illumina 🡥](https://emea.illumina.com/science/technology/next-generation-sequencing.html)
 
-(17) **Virtualizzazione dei Dati:** You didn't provide any text to translate. Could you please provide the text or expression that you would like to have translated into Italian?
+(17) **Green-IT:** Green IT si riferisce al calcolo sostenibile dal punto di vista ambientale, concentrato sulla progettazione, produzione, utilizzo e smaltimento di computer, server e sottosistemi associati in modo efficiente ed efficace con un impatto minimo sull'ambiente. 
 
-(18) ***Cloud computing*:** You didn't provide any text to translate. Could you please provide the text you want translated to Italian?
+(18) **Gemello digitale:** Rappresentazione virtuale di un sistema (ad esempio, una fattoria) basata su sensori e dati in tempo reale per prendere decisioni basate sui dati. 
 
-(19) **Conservazione di dati biomolecolari:** Conservare i dati nel DNA è un metodo promettente. Il DNA può conservare una densità di 10¹⁹ bit di dati per cm3, un valore molto più alto rispetto ai metodi di archiviazione attuali. I dati verranno conservati secondo il codice binario. Ad esempio, 00 -> A, 01 -> C, 10 -> G e 11 -> T. Il DNA sarà sequenziato attraverso *NGS (Illumina)*. BioTech | Testo completo gratuito | Archiviazione dati DNA (mdpi.com) Esempio: codificati 16GB di Wikipedia nel DNA. Una startup ha inserito tutti i 16GB di Wikipedia nelle stringhe del DNA per dimostrare la nuova tecnologia di archiviazione - CNET.
+(19) **Dati aperti collegati:** Linked Open Data è un modo di pubblicare e collegare dati sul web utilizzando standard aperti e *URI* in modo tale che possano essere facilmente accessibili, interrogati e arricchiti da umani e macchine. 
 
-(20) **Quantum-Computing:** You didn't provide any expression to translate. Could you please provide it?
+(20) ***ESG*:** Ambientale, Sociale e di Governance Aziendale. Quadro per valutare un'organizzazione riguardo agli standard ambientali, sociali e di governance. 
 
-(21) **Modelli Linguistici di Grande Dimensione:** Modelli di apprendimento automatico capaci di generare testo scritto in maniera simile a quella umana. *GPT-3.5*, *GPT-4*, *Bard*, *Claude 2*, *LLAMA*.
+(21) **Agricoltura verticale:** Produzione di piante in un ambiente controllato e accatastate l'una sull'altra. 
 
-(22) **Riconoscimento Facciale:** Software che può misurare la somiglianza dei volti da immagini o video, riconoscendo così i volti. <http://clearview.ai> <https://pimeyes.com>
+(22) **Dati aperti del governo:** Dati governativi che sono apertamente accessibili al pubblico.  [opendata.swiss 🡥](https://opendata.swiss)
 
-(23) **Modelli di Diffusione Latente:** Modelli di rete neurale che consentono la sintesi di immagini ad alta risoluzione utilizzando meno risorse rispetto ad altri metodi (GAN, VAE, ARM). Possono generare immagini a partire da input di testo, rimuovere oggetti nelle immagini. GitHub - CompVis/latent-diffusion: Sintesi di immagini ad alta risoluzione con modelli di diffusione latente.
+(23) **Resource Description Framework (RDF):** Struttura per rappresentare dati interconnessi sul web (web semantico). È particolarmente destinato a rappresentare metadati su risorse web. 
 
-(24) **discorso2testo:** Modelli di apprendimento automatico che convertono il discorso di varie lingue in testo. *Speech2Text-App*
+(24) **i14y:** i14y è la piattaforma svizzera di interoperabilità e funge anche da catalogo nazionale dei dati svizzeri. È gestito dall'Ufficio Federale di Statistica. 
 
-(25) **Traduzione Automatica:** Software che traduce automaticamente il testo da una lingua all'altra. <https://www.deepl.com>
+(25) **visualize.admin.ch:** Strumento di visualizzazione per i dati di governo aperto pubblicati su *LINDAS*.  [visualize.admin.ch 🡥](https://www.visualize.admin.ch)
 
-(26) **AGI:** Intelligenza Artificiale Generale. Un tipo ipotetico di agente intelligente che può apprendere per eseguire qualsiasi compito intellettuale che gli esseri umani o gli animali possono svolgere.
+(26) **Archiviazione di dati biomolecolari:** Tecnologia innovativa che utilizza molecole biologiche, principalmente DNA, per memorizzare e recuperare informazioni digitali, offrendo potenzialmente alta densità e lunga conservazione dei dati.  [CNET Article 🡥](https://www.cnet.com/tech/computing/startup-packs-all-16gb-wikipedia-onto-dna-strands-demonstrate-new-storage-tech/)
 
-(27) **Traduzione del discorso in tempo reale:** Strumenti che utilizzano la traduzione automatica neurale (NTM) permettono di tradurre all'istante il discorso da una lingua all'altra. Esempio: *SpeechTrans*
+(27) ***Quantum-Computing*:** Un tipo di calcolo che utilizza fenomeni quantomeccanici, come la *superposition* e l'*entanglement*, per eseguire operazioni sui dati, risolvendo potenzialmente certi problemi più velocemente dei computer classici. 
 
-(28) **Superintelligenza:** Un agente o sistema ipotetico che possiede un'intelligenza molto superiore a quella delle menti umane più brillanti e dotate in praticamente tutti i campi di interesse.
+(28) ***GPU-Clusters*:** Gruppo di computer dotato di unità di elaborazione grafica. Utile per l'allenamento e l'esecuzione di grandi modelli di *machine learning*.  [AWS 🡥](https://aws.amazon.com/nvidia/)
 
-(29) ***AutoML*:** Il principale vantaggio dell'Auto-ML risiede nel risparmio di tempo nella elaborazione dei dati e nelle fasi di test, necessarie per mettere in funzione un modello (AI) sufficientemente potente.
+(29) **Virtualizzazione dei Dati:** La virtualizzazione dei dati è una tecnologia che consente il recupero e la manipolazione dei dati senza richiedere dettagli tecnici sui dati stessi, come ad esempio il loro formato o la loro posizione fisica. 
 
-(30) **testo2discorso:** Software che genera discorsi da testi scritti che suonano come esseri umani (interessanti). <https://openai.com/blog/chatgpt-can-now-see-hear-and-speak>
+(30) ***Cloud computing*:** Consegna di diversi servizi tramite Internet, inclusi archiviazione dati, server, database, rete e software, fornendo spesso risorse flessibili, innovazione più rapida e economie di scala. 
 
-(31) **Grandi Modelli Multimodali:** I Grandi Modelli Multimodali (LMM) sono avanzati sistemi di intelligenza artificiale in grado di elaborare e generare informazioni da più tipi di dati, come testo, immagini, audio e video, utilizzando potenti modelli di linguaggio pre-allenati come componente centrale.
+(31) **Tag digitali per orecchie:** Marche auricolari che permettono di tracciare geograficamente gli animali da fattoria. 
 
-(32) **Robot per la rimozione delle erbacce:** Spruzzatura intelligente per trattamenti locali delle vostre colture in filari, *Gräser* e prati.
+(32) **Fertilizzazione a tasso variabile:** Regolare la quantità e il tipo di fertilizzante applicato alle colture in base alle esigenze specifiche e alle condizioni di diverse aree all'interno di un campo. 
 
-(33) **Imaging UAV:** Riprese aeree tramite *droni*. Possono essere utilizzate per rilevare lo stress idrico o creare mappe di nutrienti.
+(33) **Robot per la diserbo:** Robot che mirano specificamente alle erbacce in un campo. Le erbacce possono essere distrutte utilizzando erbicidi, zappe, acqua o *lasers*. 
 
-(34) **IoT:** Rete di dispositivi che raccolgono dati.
+(34) **Immagini da *UAV*:** L'imaging UAV si riferisce al processo di cattura di immagini e video dall'aria utilizzando veicoli aerei senza pilota (*UAV*), comunemente utilizzati per scopi come il rilevamento, la mappatura e la sorveglianza. 
 
-(35) **Robot per la mungitura:** You forgot to provide the actual expression or phrase that needs translating. Can you please top up your request?
+(35) ***IoT*:** L'Internet delle Cose (IoT) si riferisce alla rete di oggetti incorporati con sensori, software e altre tecnologie allo scopo di connettersi e scambiare dati con altri dispositivi e sistemi tramite internet. 
 
-(36) **Immagini satellitari:** Casi d'uso come la determinazione del periodo di copertura vegetale attraverso i dati del *satellite*.
+(36) **Robot da mungitura:** Macchina progettata per gestire l'intero processo di mungitura delle mucche da latte, riducendo la necessità di manodopera umana nell'allevamento *dairy farming*. Could automatically send milk data needed for administrative purposes. [Moser Stalleinrichtungen 🡥](http://www.moser-stalleinrichtungen.ch)
 
-(37) **Fertilizzazione a tasso variabile:** Subito, però, per la *Düngung*
+(37) **Immagini satellitari:** Coinvolge la cattura di immagini della Terra da satelliti in orbita, che vengono utilizzate per vari scopi. Could be used to determine the vegetation cover period by satellite data.
+
+(38) **Immagini satellitari:** L'imaging satellitare comporta la cattura di immagini della Terra da satelliti in orbita, che vengono utilizzate per vari scopi come la previsione del tempo, la mappatura e il monitoraggio ambientale. Could be used to determine the vegetation cover period by satellite data.
