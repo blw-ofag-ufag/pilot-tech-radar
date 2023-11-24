@@ -13,3 +13,10 @@ The program runs a tripple for-loop to individually translate the content of cel
 > [!NOTE]  
 > In order to run the script `translator.R`, you need to [set up an OpenAI account](https://openai.com/product) and create an [API access key](https://platform.openai.com/). You then have to save the key in a file called `my-secret-API-key`.
 
+Once the data is translated to all desired languages, you may run the main script.
+
+```bash
+Rscript tech-radar.R
+```
+
+This program will create a visualization of the technology radar content for every language, and a corresponding `README.md` file containing the legend of the different technologies in the visualization.
