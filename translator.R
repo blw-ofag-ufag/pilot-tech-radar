@@ -4,6 +4,17 @@
 #' date: 2023-11-23
 #' ---
 
+#' Print out an opener
+cat("Federal Office for Agriculture (2023)\n
+  █████                                           ████             █████             ███████████  
+ ░░███                                           ░░███            ░░███             ░░███░░░░░███ 
+ ███████   ████████   ██████   ████████    █████  ░███   ██████   ███████    ██████  ░███    ░███ 
+░░░███░   ░░███░░███ ░░░░░███ ░░███░░███  ███░░   ░███  ░░░░░███ ░░░███░    ███░░███ ░██████████  
+  ░███     ░███ ░░░   ███████  ░███ ░███ ░░█████  ░███   ███████   ░███    ░███ ░███ ░███░░░░░███ 
+  ░███ ███ ░███      ███░░███  ░███ ░███  ░░░░███ ░███  ███░░███   ░███ ███░███ ░███ ░███    ░███ 
+  ░░█████  █████    ░░████████ ████ █████ ██████  █████░░████████  ░░█████ ░░██████  █████   █████
+   ░░░░░  ░░░░░      ░░░░░░░░ ░░░░ ░░░░░ ░░░░░░  ░░░░░  ░░░░░░░░    ░░░░░   ░░░░░░  ░░░░░   ░░░░░\n\n")
+
 #' Function to print out progress
 progressbar <- function (i, n, message = "") {
   w <- (options("width")$width - 6 - nchar(message))/n
@@ -11,7 +22,7 @@ progressbar <- function (i, n, message = "") {
       strrep("-", floor((n - i) * w)), "] ", paste0(format(round(i/n * 100, 1), nsmall = 1), "%  "), sep = "")
 }
 
-#' Set script parameters
+#' Define all languages to which we want to translate the (English) master data
 languages <- c("French", "German", "Italian")
 
 #' Fix random processes
@@ -27,7 +38,7 @@ Sys.setenv(OPENAI_API_KEY = readLines("my-secret-API-key"))
 data <- read.csv(file.path("English", "data-English.csv"), sep = ";")
 
 #' Define the columns we want to translate
-relevant_columns <- c(1,4)
+relevant_columns <- c(1,4,6)
 
 #' define which variables are factors
 is_factor <- c("Sector","Status")
@@ -63,7 +74,7 @@ for (language in languages) {
         messages = list(list(role = "user",
                              content = prompt))
       )
-
+      
       # save translation in the data frame
       X[i,j] <- translation$choices$message.content
       
@@ -81,9 +92,5 @@ for (language in languages) {
   
   # start new line for new language
   cat("\n")
+  
 }
-
-
-
-
-
