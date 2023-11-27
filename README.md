@@ -20,3 +20,5 @@ Rscript tech-radar.R
 ```
 
 This program will create a visualization of the technology radar content for every language, and a corresponding `README.md` file containing the legend of the different technologies in the visualization.
+
+![](terminal.gif)
