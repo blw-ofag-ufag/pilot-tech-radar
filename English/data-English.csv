@@ -1,4 +1,4 @@
-﻿Name;Sector;Status;Description;Relevance;Link;Example_URL;Example_Name
+Name;Sector;Status;Description;Relevance;Link;Example_URL;Example_Name
 Large Language Models;artificial intelligence;launched on market;Artificial intelligence systems that are capable of generating written text in a human-like manner.;5;;https://chat.openai.com/;ChatGPT
 Machine Translation;artificial intelligence;maturity;Software that automatically translates text from one language to another.;3;Such software can make it much more feasible to publish content to all national languages.;https://deepl.com/;Deepl
 Facial Recognition;artificial intelligence;launched on market;Software that can measure the similarity of faces from images or video, thus recognizing faces.;1;;https://pimeyes.com/;PimEyes
@@ -36,4 +36,3 @@ Variable rate fertilization;smart farming;experimentation;Adjusting the amount a
 Next generation sequencing;data;applied research;Technology used to sequence DNA or RNA. Can be used in several fields of research like the study of seeds and plant varieties.;2;;https://emea.illumina.com/science/technology/next-generation-sequencing.html;Illumina
 UAV imaging;smart farming;launched on market;UAV imaging refers to the process of capturing images and videos from the air using unmanned aerial vehicles (UAV), commonly used for purposes like surveying, mapping, and surveillance.;3;;;
 Satellite imaging;smart farming;maturity;Involves capturing images of the Earth from orbiting satellites, which are used for various purposes.;4;Could be used to determine the vegetation cover period by satellite data.;;
-Satellite imaging;smart farming;maturity;Satellite imaging involves capturing images of the Earth from orbiting satellites, which are used for various purposes such as weather forecasting, mapping, and environmental monitoring.;4;Could be used to determine the vegetation cover period by satellite data.;;

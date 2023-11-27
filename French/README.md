@@ -76,5 +76,3 @@ Translation: Fête du *Cherry Blossom*
 (36) **Robots de *milking*:** Machine conçue pour gérer l'ensemble du processus de traite des vaches laitières, réduisant ainsi le besoin de main-d'œuvre humaine dans l'agriculture laitière. Pourrait envoyer automatiquement les données de *milk* nécessaires à des fins administratives. [Moser Stalleinrichtungen 🡥](http://www.moser-stalleinrichtungen.ch)
 
 (37) **Imagerie par satellite:** Implique la capture d'images de la Terre à partir de satellites en orbite, qui sont utilisées à diverses fins. Pourrait être utilisé pour déterminer la période de couverture végétale par les données de *satellite*.
-
-(38) **Imagerie par *satellite*:** L'imagerie par satellite implique la capture d'images de la Terre à partir de satellites en orbite, qui sont utilisées à diverses fins telles que la prévision météorologique, la cartographie et la surveillance environnementale. Pourrait être utilisé pour déterminer la période de couverture végétale par les données de *satellite*.

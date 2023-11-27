@@ -80,5 +80,3 @@ Italian Translation: \Un atto di gentilezza si ripaga da solo.\
 (36) **Robot da mungitura:** Macchina progettata per gestire l'intero processo di mungitura delle mucche da latte, riducendo la necessità di manodopera umana nell'allevamento di bovini da *dairy farming*. Potrebbe inviare automaticamente i dati del latte necessari per scopi amministrativi. [Moser Stalleinrichtungen 🡥](http://www.moser-stalleinrichtungen.ch)
 
 (37) **Immagini satellitari:** Comprende la cattura di immagini della Terra da satelliti in orbita, che vengono utilizzate per vari scopi. Potrebbe essere utilizzato per determinare il periodo di copertura della vegetazione tramite dati satellitari.
-
-(38) **Immagini satellitari:** L'imaging satellitare implica la cattura di immagini della Terra da satelliti in orbita, che vengono utilizzate per vari scopi come la previsione del tempo, la mappatura e il monitoraggio ambientale. Potrebbe essere utilizzato per determinare il periodo di copertura vegetale tramite dati *satellite*.

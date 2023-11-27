@@ -74,5 +74,3 @@
 (36) **Milking robots:** Machine designed to handle the entire process of milking dairy cows, reducing the need for human labor in dairy farming. Could automatically send milk data needed for administrative purposes. [Moser Stalleinrichtungen 🡥](http://www.moser-stalleinrichtungen.ch)
 
 (37) **Satellite imaging:** Involves capturing images of the Earth from orbiting satellites, which are used for various purposes. Could be used to determine the vegetation cover period by satellite data.
-
-(38) **Satellite imaging:** Satellite imaging involves capturing images of the Earth from orbiting satellites, which are used for various purposes such as weather forecasting, mapping, and environmental monitoring. Could be used to determine the vegetation cover period by satellite data.

@@ -74,5 +74,3 @@
 (36) **Melkroboter:** Maschine konzipiert, um den gesamten Prozess des Melkens von Milchkühen zu bewältigen, wodurch der Bedarf an menschlicher Arbeit in der Milchviehwirtschaft reduziert wird. Könnte automatisch notwendige Milchdaten für Verwaltungszwecke senden. [Moser Stalleinrichtungen 🡥](http://www.moser-stalleinrichtungen.ch)
 
 (37) **Satellitenbildgebung:** Betrifft die Erfassung von Bildern der Erde von umlaufenden Satelliten, die für verschiedene Zwecke verwendet werden. Könnte verwendet werden, um die Vegetationsbedeckungsperiode mit Hilfe von Satellitendaten zu bestimmen.
-
-(38) **Satellitenbildgebung:** Die *Satellite imaging* beinhaltet das Erfassen von Bildern der Erde durch umlaufende Satelliten, die für verschiedene Zwecke verwendet werden, wie zum Beispiel die Wettervorhersage, Kartierung und Umweltüberwachung. Könnte verwendet werden, um die Vegetationsbedeckungsperiode mittels Satellitendaten zu bestimmen.
