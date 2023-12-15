@@ -9,15 +9,15 @@
 
 (4) **AutoML:** Short for Automated Machine Learning, refers to the process of automatically selecting and fine-tuning machine learning models. Allows for cheap model fitting wherever small data sets are available. [R package automl 🡥](https://cran.r-project.org/web/packages/automl/)
 
-(5) **Text-to-speech:** Software that generates speech from written text which sounds like (interesting) human beings.  [OpenAI’s TTS 🡥](https://platform.openai.com/docs/guides/text-to-speech)
+(5) **Text-to-speech:** Software that generates speech from written text which sounds like (interesting) human beings.  [OpenAIÕs TTS 🡥](https://platform.openai.com/docs/guides/text-to-speech)
 
-(6) **Large Language Models:** Artificial intelligence systems that are capable of generating written text in a human-like manner.  [ChatGPT 🡥](https://chat.openai.com/)
+(6) **Large Language Models:** Artificial intelligence systems that are capable of generating written text in a human-like manner. LLMs may help with translation, rephrasing, brainstorming and much more. [ChatGPT 🡥](https://chat.openai.com/)
 
 (7) **Facial Recognition:** Software that can measure the similarity of faces from images or video, thus recognizing faces.  [PimEyes 🡥](https://pimeyes.com/)
 
-(8) **Latent Diffusion Models:** Models that generate arbitrary images from text, image or parameter inputs.  [Midjourney 🡥](https://www.midjourney.com/)
+(8) **Latent Diffusion Models:** Models that generate arbitrary images from text, image or parameter inputs. This might be useful for finding perfectly fitting images for presentations. [Midjourney 🡥](https://www.midjourney.com/)
 
-(9) **Speech-to-text:** Machine learning models that convert speech of various languages to text.  [Whisper 🡥](https://openai.com/research/whisper)
+(9) **Speech-to-text:** Machine learning models that convert speech of various languages to text. Could be used for automatic protocol writing. [Whisper 🡥](https://openai.com/research/whisper)
 
 (10) **Large Multimodal Models:** Advanced artificial intelligence systems that can process information from multiple types of data, such as text, images, audio, and video, using powerful pre-trained language models as a core component.  [GPT-4 🡥](https://openai.com/blog/chatgpt-can-now-see-hear-and-speak)
 
@@ -47,7 +47,7 @@
 
 (23) **Resource Description Framework:** Framework to represent interconnected data on the web (semantic web). It is particularly intended for representing metadata about web resources. 
 
-(24) **i14y:** i14y is the Swiss interoperability platform and also serves as Switzerland’s national data catalogue. It is maintained by the Federal Statistical Office. 
+(24) **i14y:** i14y is the Swiss interoperability platform and also serves as SwitzerlandÕs national data catalogue. It is maintained by the Federal Statistical Office. 
 
 (25) **visualize.admin.ch:** Visualization tool for open government data published on LINDAS.  [visualize.admin.ch 🡥](https://www.visualize.admin.ch)
 

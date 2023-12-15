@@ -1,4 +1,5 @@
 % File with OpenAI API keys
 my-secret-API-key
 
+% Mac-specific file
 .DS_Store

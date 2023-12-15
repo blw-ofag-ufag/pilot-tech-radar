@@ -57,18 +57,23 @@ for (language in languages) {
     # loop over every row
     for (i in 1:nrow(data)) {
       
-      # save prompt
-      prompt <- paste0("Please loosely translate the following expression to ", language, " such that it reads nicely. Make sure to only answer with the valid translation and nothing else. Keep words that are uncommon in ", language, "in the original, but make them italic.\n\n", X[i,j])
-      
-      # ask gpt-4 for translation
-      translation <- openai::create_chat_completion(
-        model = "gpt-4",
-        messages = list(list(role = "user",
-                             content = prompt))
-      )
-      
-      # save translation in the data frame
-      X[i,j] <- translation$choices$message.content
+      # only ask for translation if the current string is non-empty
+      if(!(X[i,j]=="" | is.na(X[i,j]))) {
+        
+        # save prompt
+        prompt <- paste0("Please loosely translate the following expression to ", language, " such that it reads nicely. Make sure to only answer with the valid translation and nothing else. Keep words that are uncommon in ", language, "in the original, but make them italic.\n\n", X[i,j])
+        
+        # ask gpt-4 for translation
+        translation <- openai::create_chat_completion(
+          model = "gpt-4",
+          messages = list(list(role = "user",
+                               content = prompt))
+        )
+        
+        # save translation in the data frame
+        X[i,j] <- translation$choices$message.content
+        
+      }
       
       # print out progress
       progressbar((which(j==relevant_columns)-1)*nrow(data)+i, length(relevant_columns)*nrow(data), paste("Translating to", language))
