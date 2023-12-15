@@ -31,3 +31,4 @@ The data sets in each sub-directory contain observations with name, description 
 x = R \; \sin(\varphi) \qquad \qquad y = R \; \cos(\varphi)
 ```
 
+Where $R$ is the radius ($R \in [1,2]$), and $\varphi$ is the angle ($\varphi \in [-\pi,\pi]$).
