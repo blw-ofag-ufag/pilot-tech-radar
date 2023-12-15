@@ -25,7 +25,6 @@ for (language in c("English", "German", "French", "Italian")) {
   data <- data[!as.logical(rowSums(data[,2:3]=="")),]
   
   #' Change variable classes
-  #for (i in c("Sector","Status")) data[,i] %<>% tolower %<>% as.factor
   factor_names <- read.csv(file.path("resources","factor-translations.csv"))
   for (i in c("Sector","Status")) {
     levelnames <- factor_names[factor_names$Variable==i & factor_names$Language==language,"Translation"]
@@ -43,21 +42,24 @@ for (language in c("English", "German", "French", "Italian")) {
   d <- nlevels(data[,"Status"])
   g <- nlevels(data[,"Sector"])
   
-  #' Give an x and y axis position to every observation
-  data[,"x"] <- (as.integer(data[,"Sector"])-1)/(g-1)
-  data[,"y"] <- 1 - (as.integer(data[,"Status"])-1)/(d-1)
+  #' give a position to every observation in polar coordinates
+  data[,"phi"] <- pi * ((as.integer(data[,"Sector"])-1)/(g-1) - 0.5) # should range from -pi to +pi
+  data[,"R"] <- 1 - (as.integer(data[,"Status"])-1)/(d-1) + 1 # should act as a scalar and range from 1 to 2
   
-  #' Add a x-axis bias such that no point overlaps
+  #' Add some noise to phi such that no point overlaps, but look aesthetically pleasing
   for (sector in levels(data[,"Sector"])) {
     for (status in levels(data[,"Status"])) {
-      x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"]
-      while(any(diff(sort(x))<(1/g/6))) x <- data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] + (lhs::randomLHS(length(x), 1) - 0.5)*1/(g+1)
-      if(length(x)==0) next
-      else data[data[,"Sector"]==sector & data[,"Status"]==status,"x"] <- x
+      phi <- data[data[,"Sector"]==sector & data[,"Status"]==status,"phi"]
+      while(any(diff(sort(phi))<(1/g/2))) phi <- data[data[,"Sector"]==sector & data[,"Status"]==status,"phi"] + pi*(lhs::optimumLHS(length(phi), 1) - 0.5)*1/(g+1)
+      if(length(phi)==0) next
+      else data[data[,"Sector"]==sector & data[,"Status"]==status,"phi"] <- phi
     }
   }
   
-  #' Convert logo to png for better handeling
+  #' override CSV file to store the polar coordinates
+  write.table(data, file = file.path(language,paste0("data-",language,".csv")), sep = ";", row.names = FALSE)
+  
+  #' Convert logo to png for better handling
   rsvg_png(file.path("resources", "logo.svg"), "logo.png", width = 1000, height = 1000)
   
   #' Read in png logo
@@ -80,13 +82,13 @@ for (language in c("English", "German", "French", "Italian")) {
   for (i in seq(-g/((g-1)*2),g/((g-1)*2),l=g+1)) lines(x = c(0, 3*sin(i*pi)), y = c(0, 3*cos(i*pi)), col = par()$bg, lwd = width)
   
   #' Add the numbered white points
-  with(data, points((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), pch = 21, cex = sqrt(Relevance)*2.5*0.8, lwd = sqrt(Relevance), bg = par()$bg))
-  with(data, text((sin(x*pi - pi/2))*(y+1), cos(x*pi-pi/2)*(y+1), 1:nrow(data), cex = sqrt(Relevance)*0.75*0.8, col = par()$fg, font = 2))
+  with(data, points((sin(phi))*R, cos(phi)*R, pch = 21, cex = sqrt(Relevance)*2.5*0.8, lwd = sqrt(Relevance), bg = par()$bg))
+  with(data, text((sin(phi))*R, cos(phi)*R, 1:nrow(data), cex = sqrt(Relevance)*0.75*0.8, col = par()$fg, font = 2))
   
   #' Labels of Sectors
   phi <- seq(-pi/2,pi/2,l=g)
-  distance <- c(2.5,2.4,2.23,2.4,2.5)
-  text(x = distance*sin(phi), y = distance*cos(phi), toupper(gsub(" ", "\n", levels(data$Sector))), xpd = NA, font = 2, cex = 1.5)
+  R <- c(2.5,2.4,2.23,2.4,2.5)
+  text(x = R*sin(phi), y = R*cos(phi), toupper(gsub(" ", "\n", levels(data$Sector))), xpd = NA, font = 2, cex = 1.5)
   
   #' Labels of Status
   text(x=0, seq(-0.9,-1.5,l=d), rev(toupper(levels(data$Status))), font = 2, cex = 1.2, xpd = NA, col = palette)
@@ -111,3 +113,4 @@ for (language in c("English", "German", "French", "Italian")) {
   sink()
   
 }
+

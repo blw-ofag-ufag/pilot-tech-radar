@@ -22,3 +22,12 @@ Rscript tech-radar.R
 ```
 
 This program will create a visualization of the technology radar content for every language, and a corresponding `README.md` file containing the legend of the different technologies in the visualization.
+
+## Making the visualization with the data sets
+
+The data sets in each sub-directory contain observations with name, description etc. as well as the coordinates of said observation in the plot. Because it's a circular plot, the polar coordinates are provided. They can quickly be converted to cartesian coordinates:
+
+```math
+x = R \; \sin(\varphi) \qquad \qquad y = R \; \cos(\varphi)
+```
+
