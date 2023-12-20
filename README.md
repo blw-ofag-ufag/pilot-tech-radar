@@ -1,4 +1,4 @@
-![](terminal.gif)
+![](resources/terminal.gif)
 
 # Warm-up DBDD
 
