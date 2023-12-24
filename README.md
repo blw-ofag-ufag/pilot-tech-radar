@@ -28,7 +28,7 @@ This program will create a visualization of the technology radar content for eve
 The data sets in each sub-directory contain observations with name, description etc. as well as the coordinates of said observation in the plot. Because it's a circular plot, the polar coordinates are provided. They can quickly be converted to cartesian coordinates:
 
 ```math
-x = R \; \sin(\varphi) \qquad \qquad y = R \; \cos(\varphi)
+x = R \; \cos(\varphi) \qquad \qquad y = R \; \sin(\varphi)
 ```
 
 Where $R$ is the radius ($R \in [1,2]$), and $\varphi$ is the angle ($\varphi \in [-\pi,\pi]$).
